@@ -49,7 +49,7 @@ X = [ones(m, 1) X]; %ones(m,1) for the const term
 %                 initial_theta, options);
 %
 
-%% ---- if the y-label is not onehot:: use this:::
+%% ---- if the y-label is onehot:: use this:::
 % for kind = 1:num_labels
 %     initial_theta_kind = zeros(n + 1, 1);
     

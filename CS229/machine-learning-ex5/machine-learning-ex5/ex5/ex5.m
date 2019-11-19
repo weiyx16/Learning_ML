@@ -33,6 +33,7 @@ load ('ex5data1.mat');
 
 % m = Number of examples
 m = size(X, 1);
+size(y) % 12*1
 
 % Plot training data
 plot(X, y, 'rx', 'MarkerSize', 10, 'LineWidth', 1.5);

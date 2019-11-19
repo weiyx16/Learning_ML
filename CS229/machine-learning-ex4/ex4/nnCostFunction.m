@@ -64,6 +64,7 @@ Theta2_grad = zeros(size(Theta2));
 %
 
 % decode the labels
+% one-hot: the y(sample, 1) is the hoted index
 y_dec = zeros(m,num_labels);
 for sample = 1:m
     y_dec(sample, y(sample, 1)) = 1;
@@ -88,6 +89,7 @@ delta_2 = (Theta2(:, 2:end)' * delta_3')' .* sigmoidGradient(z2);
 Delta_1 = delta_2' * a1;
 Delta_2 = delta_3' * a2;
 
+% set the theta <-> bias =0.. not regular here
 Theta1(:,1) = 0;  
 Theta2(:,1) = 0;  
 Theta1_grad = Delta_1/m+lambda/m*Theta1;  
