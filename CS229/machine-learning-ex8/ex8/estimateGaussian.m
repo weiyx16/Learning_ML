@@ -20,14 +20,10 @@ sigma2 = zeros(n, 1);
 %               the data for the i-th feature and sigma2(i)
 %               should contain variance of the i-th feature.
 %
-mu_row = mean(X);
-mu = mu_row(:);
-sigma2_row = 1 / m * sum(bsxfun(@minus, X, mu_row) .^2);
-sigma2 = sigma2_row(:);
 
-
-
-
+mu = sum(X, 1) ./ m;
+X = X .- mu;
+sigma2 = sum(X.^2, 1) ./ m;
 
 
 

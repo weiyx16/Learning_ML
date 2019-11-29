@@ -74,7 +74,6 @@ pause;
 % 
 
 pval = multivariateGaussian(Xval, mu, sigma2);
-
 [epsilon F1] = selectThreshold(yval, pval);
 fprintf('Best epsilon found using cross-validation: %e\n', epsilon);
 fprintf('Best F1 on Cross Validation Set:  %f\n', F1);
